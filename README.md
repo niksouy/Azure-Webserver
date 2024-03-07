@@ -1,6 +1,6 @@
 <h1>Build, Secure, and Protect a Web Application</h1>
 <h2>Description</h2>
-This was my first deliverable Cybersecurity project during studying at UofT through which I built, secured, and protected a cloud application that hosts my own cyber blog (alicyberblog.info). The porpous of this project was to demontrate my knowledge of cloud, cloud security, networking, web development, cryptography, and network security.<br />
+This was my first deliverable Cybersecurity project while studying at UofT, during which I built, secured, and protected a cloud application that hosts my own cyber blog (alicyberblog.info). The purpose of this project was to demonstrate my knowledge of cloud, cloud security, networking, web development, cryptography, and network security.<br />
 
 
 <h2>Utilities Used</h2>
@@ -12,7 +12,7 @@ This was my first deliverable Cybersecurity project during studying at UofT thro
 
 - <b>A personal Azure account </b>
 
-<h2>Implementing a Virtual Network in Azure :</h2>
+<h2>Implementing a Virtual Network in Azure:</h2>
 
 <p align="center">
 ⬇️Step-1: Setting up the Resource Group  
@@ -31,7 +31,7 @@ This was my first deliverable Cybersecurity project during studying at UofT thro
 <img src="https://i.imgur.com/oUKRjbq.png" height="80%" width="80%" />  
 <br />
 - <br />
-⬇️Step-3: Creating 3 VMs inside the Vnet that I made in step-2, including 2 VMs to host my Blog as a webserver, and it's redundant, alongside 1 JumpBox to control and deploy those servers. 
+⬇️Step-3: Created 3 VMs inside the Vnet that I made in step-2, including 2 VMs to host my Blog as a webserver, and it's redundant, alongside 1 JumpBox to control and deploy those servers. 
 <br />
 <img src="https://i.imgur.com/yK3kqpp.png" height="80%" width="80%" />
 <br />
@@ -55,9 +55,9 @@ Generating SSH Public Keys for these VMs to establish SSH connection to these we
 
 
   
-<h2>Making JumpBox ready to deploy webservers through containerization method:</h2>
+<h2>Making JumpBox ready to deploy web servers through containerization method:</h2>
 <p align="center">
-⬇️Step-4: configure the JumpBox to run Docker containers and installing a container. After doing SSH to the JumpBox which is a Linux machine, I did the below process in order to pullup the proper Ansible into the Jumpbox for my deployment.
+⬇️Step-4: configure the JumpBox to run Docker containers and install a container. After doing SSH to the JumpBox, which is a Linux machine, I did the below process in order to pull up the proper Ansible into the Jumpbox for my deployment.
 <br />
 <br /> 
   
@@ -85,7 +85,7 @@ Generating SSH Public Keys for these VMs to establish SSH connection to these we
 <br /> -
 - <br />
 <br />
-7. Now, by adding the container's public key within the Azure webservers through the Azure control panel for both webservers, I addressed those VMs to only accept the SSH inquiry that is coming from the intended source. After this update I could ping both VMs by their Private IPs, to verify the SSH-Key deployment.
+7. Now, by adding the container's public key within the Azure web servers through the Azure control panel for both web servers, I addressed those VMs to only accept the SSH inquiry that is coming from the intended source. After this update, I could ping both VMs by their Private IPs to verify the SSH-Key deployment.
 <br />
 <br />
 <img src="https://i.imgur.com/MQ5IXqJ.png" height="80%" width="80%" /> 
@@ -102,7 +102,7 @@ Generating SSH Public Keys for these VMs to establish SSH connection to these we
 <img src="https://i.imgur.com/F96tKlO.png" height="80%" width="80%" />
 <br />
 <br />
-Uncommented the highlighted line and replaced "root" username with my username within the VMs which is "sysadmin"
+Uncommented the highlighted line and replaced the "root" username with my username within the VMs, which is "sysadmin"
 <img src="https://i.imgur.com/MuqW5JI.png" height="80%" width="80%" />
 <br />
 <br />
@@ -112,7 +112,7 @@ Uncommented the highlighted line and replaced "root" username with my username w
 <br />
 <br /> 
   
-1. Created an Ansible YAML file inside the installed Docker within the JumpBox to dictate and automate the deployment of the DVMA web app- UofT Bootcamp provided this configuration.  
+1. I created an Ansible YAML file inside the installed Docker within the JumpBox to dictate and automate the deployment of the DVMA web app—UofT Bootcamp provided this configuration.  
 <img src="https://i.imgur.com/a9sUQEh.png" />
 <br />
 <br />
@@ -126,14 +126,14 @@ Uncommented the highlighted line and replaced "root" username with my username w
 <br />
 <h2></h2>
 
-⬇️Step-6: Guaranting High-Availability through deploying a Load Balancer and a redundant webserver (IP 10.0.0.5) for the 2 webservers
+⬇️Step-6: Guaranting High-Availability through deploying a Load Balancer and a redundant web server (IP 10.0.0.5) for the 2 web servers
 <br />
 <br />
 1. Created a load balancer in the resource group I created in Step-1.
 <img src="https://i.imgur.com/X9J44EV.png" height="80%" width="80%" />
 <br />
 <br />
-2. Added frontend Public IP to the LoadBalancer since it's a gateway for the webservers and my URL, alicyber.blog, will be assigned to this valid IP; therfore, it should be routable from anywhere on internet and by anyone.
+2. Added front-end Public IP to the LoadBalancer since it's a gateway for the webservers, and my URL, alicyberblog.info, will be assigned to this valid IP; therefore, it should be routable from anywhere on the internet and by anyone.
 <img src="https://i.imgur.com/lWyIt72.png" width="80%" />
 <br />
 <br />
@@ -164,9 +164,9 @@ Uncommented the highlighted line and replaced "root" username with my username w
 
 - <b>Azure Vnet that I built through Step-1 to Step-6</b></b> 
 - <b>"alicyberblog.info" domain with GoDaddy</b>
-<h2>Implementing a Virtual Network in Azure :</h2>
+<h2>Implementing a Virtual Network in Azure:</h2>
 <br/ >
-⬇️Step-1: Created "alicyberblog" web app with following configuration and based on a Apachi webserver   
+⬇️Step-1: Created "alicyberblog" web app with the following configuration and based on a Apache webserver   
 <br/ >
 <br/ >
 <br/ >
@@ -184,10 +184,10 @@ Uncommented the highlighted line and replaced "root" username with my username w
 <img src="https://i.imgur.com/FUsdXcx.jpeg" height="80%" width="80%" />
 - <br />
 - <br />
-⬇️Step-3: Deployed Apachi webserver on my web app. UofT Bootcamp provided us with a proper Docker Container (cyberxsecurity/project1-apachewebserver).  
+⬇️Step-3: Deployed Apache webserver on my web app. UofT Bootcamp provided us with a proper Docker Container (cyberxsecurity/project1-apachewebserver).  
 <br/ >
 <br/ >
-1. To start deployment with provided container, I opened Azure Cloud Shell and selected "Bash" interface created a new storage upon asking:
+1. To start deployment with the provided container, I opened Azure Cloud Shell and selected the "Bash" interface, created a new storage upon asking:
 <br/ >
 <br/ >
 <img src="https://i.imgur.com/JsmBWEj.png" height="80%" width="80%" />
@@ -196,25 +196,25 @@ Uncommented the highlighted line and replaced "root" username with my username w
 2. I ran "az webapp config container delete" to delete my web app container’s settings.
 <br/ >
 <br/ >
-3. To configure my web app with the provided container, I ran the following: az webapp config container set --name alicyberblog.info --resource-group RedTeam --docker-custom-image-name cyberxsecurity/project1-apachewebserver --enable-app-service-storage -t
+3. To configure my web app with the provided container, I ran the following: az web app config container set --name alicyberblog.info --resource-group RedTeam --docker-custom-image-name cyberxsecurity/project1-apachewebserver --enable-app-service-storage -t
 <br/ >
 <br/ >
 4. To verify that the container has been added correctly, I ran the following command to show the container for my web app: az webapp config container show --name alicyberblog.info --resource-group RedTeam
 <br/ >
 <br/ >
-5. Now, I could lunch my webapp from any device as a visitor, with a default look though🤣
+5. Now, I could launch my web app from any device as a visitor, with a default look though🤣
 <br />
 <br />
 <img src="https://i.imgur.com/o0wmb7h.png" height="80%" width="80%" />
 <br />
 <br />
-6. As the final measaure I cusomized the look of my bloge by changing its HTML code based on my prefrences.
+6. As the final measure, I customized the look of my blog by changing its HTML code based on my preferences.
 <br />
 <br />
 <img src="https://i.imgur.com/hMSTcAg.jpeg" height="150%" width="150%" />
 <br />
 <br />
-7. In order to have access to my HTML panel I should have do SSH to the container through my Web App panel in Azure.
+7. To access my HTML panel, I should have done SSH to the container through my Web App panel in Azure.
 <br />
 <br />
 <img src="https://i.imgur.com/lR1bAaS.png" height="150%" width="150%" />
@@ -223,13 +223,13 @@ Uncommented the highlighted line and replaced "root" username with my username w
 ⬇️Step-4: Securing alicyberblog.info with SSL Certificates  
 <br/ >
 <br/ >
-1. Created an Azure Key Vault and selected proper Access Policy
+1. Created an Azure Key Vault and selected the proper Access Policy
 <img src="https://i.imgur.com/7dMprX7.png" height="80%" width="80%" />
 <br/ >
 <br/ >
 Created a Self-Signed Certificate by OpenSSL through the "Bash" shell within the Azure portal
 <img src="https://i.imgur.com/JsmBWEj.png" height="80%" width="80%" />
-2. I ran this command to generate an encypted key in my Key Vault: 
+2. I ran this command to generate an encrypted key in my Key Vault: 
 <br/ >
 openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout project1_key.key -out project1_cert.crt -addext "extendedKeyUsage=serverAuth"
 <br/ >
@@ -244,21 +244,21 @@ openssl pkcs12 -export -out project1_cert.pfx -inkey project1_key.key -in projec
 <br/ >
 <img src="https://i.imgur.com/k37Ue1u.png" height="80%" width="80%" />
 <br/ >
-5. Then I went to the "Certificate" tab under App Sercices section, an uploaded the PFX file as an intented cryptographic key.
+5. Then, I went to the "Certificate" tab under the App Services section and uploaded the PFX file as an intended cryptographic key.
 <br/ >
 <img src="https://i.imgur.com/KYhMKLh.png" height="80%" width="80%" />
 <br/ >
-6. Now it was a time to bind "alicyberblog.info with the uploaded PFX file within the Certificate tab. To do so, I went to "Customs domain" tab under "alicyberblog" Web App in order to define this security key as a legit "SNI SSL" encryption. 
+6. Now, it was time to bind "alicyberblog.info with the uploaded PFX file within the Certificate tab. To do so, I went to the "Customs domain" tab under the "alicyberblog" Web App in order to define this security key as a legit "SNI SSL" encryption. 
 <br/ >-
 -<br/ >
 <img src="https://i.imgur.com/WQJAnVE.jpeg" height="80%" width="80%" />
 <br/ >-
 -<br/ >
-📜✒️note: since this certificate is not from the trusted source as SSL does, the browser would warn upon receiving "http request" from visitors.
+📜✒️note: since this certificate is not from a trusted source as SSL does, the browser would warn upon receiving a "HTTP request" from visitors.
 <br/ >
-😊But to take it seriosly and igonre the warning. It was just a schoolwork, breathtaking though.
+😊But don't take it seriously and ignore the warning. It was just schoolwork, breathtaking, though.
 <br/ >
-
+<br/ >
 <img src="https://i.imgur.com/CfmTzYc.jpeg" height="80%" width="80%" />
 
 <!--
